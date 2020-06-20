@@ -39,6 +39,34 @@ def Google_To_En():#Использует SMTP
      
     print ("successfully sent email to %s:" % (msg['To']))
 
+def Ru_To_Google():#Использует SMTP
+    # create message object instance
+     # create message object instance
+    msg = EmailMessage()
+    msg['Subject'] = "Я люблю печенье. Запомни"
+    msg['From'] = (Address("From", "макаровцы2@xn----7sbbfop6bdeyjc6o.xn--p1ai"))
+    msg['To'] = (Address("To", "yjga657@gmail.com"))
+    msg.set_content("Чацкий")     
+         
+
+    # setup the parameters of the message
+         
+    # add in the message body
+         
+    #create server
+    server = smtplib.SMTP_SSL('srv.ru: 465')#587
+    # Login Credentials for sending the mail
+    username=u"макаровцы2@xn----7sbbfop6bdeyjc6o.xn--p1ai"
+    
+    server.login(username, "bfd20380a6")
+         
+         
+    # send the message via the server.
+    server.send_message(msg)     
+    server.quit()
+         
+    print ("successfully sent email to %s:" % (msg['To']))
+
 def En_To_En():#Использует SSL
     # create message object instance
     msg = MIMEMultipart()
