@@ -104,10 +104,10 @@ def En_To_Ru():#Использует SSL
 def Ru_To_Ru():#Использует SSL
     # create message object instance
     msg = EmailMessage()
-    msg['Subject'] = "Я обязательно выживу..."
+    msg['Subject'] = "Чацкий"
     msg['From'] = (Address("From", "макаровцы2@xn----7sbbfop6bdeyjc6o.xn--p1ai"))
     msg['To'] = (Address("To", "макаровцы1@xn----7sbbfop6bdeyjc6o.xn--p1ai"))
-    msg.set_content("""Я обязательно выживу...""")     
+    msg.set_content("Чацкий")     
          
 
     # setup the parameters of the message
@@ -115,10 +115,10 @@ def Ru_To_Ru():#Использует SSL
     # add in the message body
          
     #create server
-    server = smtplib.SMTP_SSL('srv.ru: 465')
-         
+    server = smtplib.SMTP_SSL('srv.ru: 465')#587
     # Login Credentials for sending the mail
-    username="макаровцы2@xn----7sbbfop6bdeyjc6o.xn--p1ai"
+    username=u"макаровцы2@xn----7sbbfop6bdeyjc6o.xn--p1ai"
+    
     server.login(username, "bfd20380a6")
          
          
