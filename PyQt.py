@@ -33,6 +33,16 @@ class Example(QWidget):
         qbtn.clicked.connect(SMTP.En_To_En)
         qbtn.resize(qbtn.sizeHint())
         qbtn.move(200, 50)
+
+        qbtn = QPushButton('En_To_Ru', self)
+        qbtn.clicked.connect(SMTP.En_To_Ru)
+        qbtn.resize(qbtn.sizeHint())
+        qbtn.move(350, 50)
+
+        qbtn = QPushButton('Ru_To_Ru', self)
+        qbtn.clicked.connect(SMTP.Ru_To_Ru)
+        qbtn.resize(qbtn.sizeHint())
+        qbtn.move(500, 50)
         
         self.setGeometry(300, 300, 800, 500)
         self.setWindowTitle('Tooltips')
